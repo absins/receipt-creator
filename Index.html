@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+
+<style type="text/css">
+.name {
+    top: 18%;
+    left: 29%;
+    position: absolute;
+    width: 59.5%;
+    height: 1.3%;
+    
+}
+.name2 {
+    top: 62.8%;
+    left: 29%;
+    position: absolute;
+    width: 31%;
+    height: 1.3%;
+    text-align: left;
+    margin:auto;
+    font-size:1.7vw !important;
+}
+.name3 {
+    top: 83.1%;
+    left: 60.5%;
+    position: absolute;
+    width: 21.1%;
+    height: 1.3%;
+    text-align: center;
+    margin:auto;
+    font-size:1.7vw !important;
+}
+	
+.date {
+    top: 13.5%;
+    left: 72%;
+    position: absolute;
+    width: 15%;
+    height: 1.5%;
+}
+.amount {
+    top: 20.5%;
+    left: 40%;
+    position: absolute;
+    width: 14.5%;
+    height: 1.3%;
+}
+.amountmark1 {
+    top: 27.4%;
+    left: 52%;
+    position: absolute;
+    width: 14.5%;
+    height: 1.3%;
+}
+.amountmark2 {
+    top: 30%;
+    left: 70%;
+    position: absolute;
+    width: 14.5%;
+    height: 1.3%;
+}
+.amountmark3 {
+    top: 35.2%;
+    left: 77%;
+    position: absolute;
+    width: 14.5%;
+    height: 1.3%;
+}
+.amountmark4 {
+    top: 37.8%;
+    left: 52%;
+    position: absolute;
+    width: 14.5%;
+    height: 1.3%;
+}
+.citizenid {
+    top: 62.4%;
+    left: 74%;
+    position: absolute;
+    width: 17%;
+    height: 1.3%;
+}
+.address {
+    top: 64.6%;
+    left: 16%;
+    position: absolute;
+    width: 75.2%;
+    height: 3.3%;
+}
+.telnumber {
+    top: 68.6%;
+    left: 18%;
+    position: absolute;
+    width: 17%;
+    height: 1.3%;
+}
+.email {
+    top: 68.6%;
+    left: 42.6%;
+    position: absolute;
+    width: 19.1%;
+    height: 1.3%;
+}
+.birthday {
+    top: 68.6%;
+    left: 74.1%;
+    position: absolute;
+    width: 17.2%;
+    height: 1.3%;
+}
+  .big{
+    height:2%;
+    width:2%;
+  }
+.radio1 {
+    top: 27.1%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio2 {
+    top: 29.7%;
+    position: absolute;
+    left: 12.2%;
+}
+	
+.radio3 {
+    top: 32.3%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio4 {
+    top: 37.6%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio5 {
+    top: 40%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio6 {
+    top: 42.8%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio7 {
+    top: 45.2%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio8 {
+    top: 47.9%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio9 {
+    top: 50.7%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio10 {
+    top: 53.3%;
+    position: absolute;
+    left: 12.2%;
+}
+.radio11 {
+    position: absolute;
+    left: 12.2%;
+    top: 55.7%;
+}
+.accept {
+    position: absolute;
+    left: 12.31%;
+    top: 70.7%;
+}
+.SUBMIT {
+    top: 93%;
+    position: absolute;
+    width: 10%;
+    height: 2%;
+}
+.complete {
+    top: 89%;
+    position: absolute;
+    color: lightgreen;
+    left: 47.8%;
+}
+.warning {
+    top: 89%;
+    position: absolute;
+    color: black;
+    left: 29%;
+}
+.read {
+    position: absolute;
+    left: 60.7%;
+    text-align: center;
+    top: 20.1%;
+    width: 28.7%;
+}
+#textfield {
+}
+</style>
+</head>
+  <body style="line-height:18px; overflow-x:hidden; font-size:14px !important">
+    <center>
+<div style="background-image: url('https://give.md.chula.ac.th/wp-content/uploads/2023/05/givedonationform.jpeg'); max-width:1200px; width:100vw; background-size: cover; background-repeat: no-repeat; position:relative; height: 141.51vw; max-height: 1698.18px;">
+	<input class="date" type="date" id="date" value="0000-00-00">
+	<br>
+	<input class="name" type="text" name="textfield" id="name" onchange="namechange(this.value)" value="">
+	<br>
+	<input class="amount" type="number" name="textfield" id="amount" min="0" value="" onchange="number()">
+  <input class="amountmark1" type="number" name="textfield" id="amountmark0" min="0" value="0" onchange="sum()" disabled>
+  <input class="amountmark2" type="number" name="textfield" id="amountmark1" min="0" value="0" onchange="sum()" disabled>
+  <input class="amountmark3" type="number" name="textfield" id="amountmark2" min="0" value="0" onchange="sum()" disabled>
+  <input class="amountmark4" type="number" name="textfield" id="amountmark3" min="0" value="0" onchange="sum()" disabled>
+	<br>
+	
+	    <input class="radio1 big" type="checkbox" name="RadioGroup1" value="radio" id="RadioGroup1_0" onchange="uncheckradio(0)">
+	  <br>
+		<br>
+	    <input class="radio2 big" type="checkbox" name="RadioGroup1" value="radio" id="RadioGroup1_1" onchange="uncheckradio(1)">
+	  <br>
+		<br>
+	    <input class="radio3 big" type="checkbox" name="RadioGroup1" value="radio" id="RadioGroup1_2" onchange="uncheckradio(2)">
+	  <br>
+		<br>
+		<br>
+	    <input class="radio4 big" type="checkbox" name="RadioGroup1" value="radio" id="RadioGroup1_3" onchange="uncheckradio(3)">
+	  <br>
+		<br>
+	    <input class="radio5 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_4" onchange="uncheckbox()">
+	  <br>
+		<br>
+	    <input class="radio6 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_5" onchange="uncheckbox()">
+		<br>
+	    <input class="radio7 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_6" onchange="uncheckbox()">
+	  <br>
+	    <input class="radio8 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_7" onchange="uncheckbox()">
+	  <br>
+		<br>
+	    <input class="radio9 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_8" onchange="uncheckbox()">
+	  <br>
+		<br>
+	    <input class="radio10 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_9" onchange="uncheckbox()">
+		<br>
+	    <input class="radio11 big" type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_10" onchange="uncheckbox()">
+ 
+	<br>
+  <p class="name2"id="name2"></p>
+	<input class="citizenid" type="number" name="textfield" id="citizenid" max="9999999999999" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==13) return false;" value=""/>
+	<br>
+	<textarea class="address" id="address" value=""></textarea>
+	<br>
+	<input class="telnumber" type="number" name="textfield" id="telnumber" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;" value=""/>
+	<input class="email" type="text" name="textfield" id="email" value="">
+	<input class="birthday" type="date" id="birthday" value="">
+	<br>
+	<input class="accept big" type="checkbox" id="accept" value="">
+	<br>
+	<p class="name3"id="name3"></p>
+	<br>
+  <center><button class="SUBMIT" onclick="submit()">SUBMIT</button></center>
+  <br>
+  <p class="read"id="read"></p>
+  <br>
+  <center><h1 class="complete"id="complete"></h1></center>
+  <center><h3 class="warning"id="warning"></h3></center>
+  
+</div>
+</center>
+</body>
+<script>
+  function sum(){
+    var amou=[];
+    amou[0]=document.getElementById("amountmark0").value;
+    console.log(amou[0]);
+    amou[1]=document.getElementById("amountmark1").value;
+    amou[2]=document.getElementById("amountmark2").value;
+    amou[3]=document.getElementById("amountmark3").value;
+    document.getElementById("amount").value=parseInt(amou[0])+parseInt(amou[1])+parseInt(amou[2])+parseInt(amou[3]);
+    number();
+  }
+  function uncheckbox(){
+    
+    document.getElementById("RadioGroup1_0").checked =false;
+    document.getElementById("RadioGroup1_1").checked =false;
+    document.getElementById("RadioGroup1_2").checked =false;
+    document.getElementById("RadioGroup1_3").checked =false;
+    document.getElementById("amountmark0").disabled =true;
+    document.getElementById("amountmark1").disabled =true;
+    document.getElementById("amountmark2").disabled =true;
+    document.getElementById("amountmark3").disabled =true;
+    var a = document.getElementById("amountmark0");
+    var b = document.getElementById("amountmark1");
+    var c = document.getElementById("amountmark2");
+    var d = document.getElementById("amountmark3");
+    if(parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)!=0){
+      a.value = 0;
+      b.value = 0;
+      c.value = 0;
+      d.value = 0;
+      document.getElementById("amount").value = 0;
+      number();
+
+    }
+
+  }
+
+  function uncheckradio(a){
+    document.getElementById("RadioGroup1_4").checked =false;
+    document.getElementById("RadioGroup1_5").checked =false;
+    document.getElementById("RadioGroup1_6").checked =false;
+    document.getElementById("RadioGroup1_7").checked =false;
+    document.getElementById("RadioGroup1_8").checked =false;
+    document.getElementById("RadioGroup1_9").checked =false;
+    document.getElementById("RadioGroup1_10").checked=false;
+    if(document.getElementById("RadioGroup1_"+a.toString()).checked==true){
+        document.getElementById("amountmark"+a.toString()).disabled =false;}
+    else{document.getElementById("amountmark"+a.toString()).disabled =true;
+         document.getElementById("amountmark"+a.toString()).value =0;
+         sum(); }
+    
+
+  }
+  function namechange(val){
+    document.getElementById("name3").innerHTML = val;
+    document.getElementById("name2").innerHTML = val;
+  }
+
+  function submit(){
+    document.getElementById("warning").innerHTML="";
+    document.getElementById("complete").innerHTML="";
+    if(document.getElementById("RadioGroup1_0").checked==true&&document.getElementById("amountmark0").value==0){
+      document.getElementById("warning").innerHTML="You did not enter all donation boxs you had checked. Please recheck again.";
+      return 0;
+    }
+    else if(document.getElementById("RadioGroup1_1").checked==true&&document.getElementById("amountmark1").value==0){
+      document.getElementById("warning").innerHTML="You did not enter all donation boxs you had checked. Please recheck again.";
+      return 0;
+    }
+    else if(document.getElementById("RadioGroup1_2").checked==true&&document.getElementById("amountmark2").value==0){
+      document.getElementById("warning").innerHTML="You did not enter all donation boxs you had checked. Please recheck again.";
+      return 0;
+    }
+    else if(document.getElementById("RadioGroup1_3").checked==true&&document.getElementById("amountmark3").value==0){
+      document.getElementById("warning").innerHTML="You did not enter all donation boxs you had checked. Please recheck again.";
+      return 0;
+    }
+    document.getElementById("warning").innerHTML = "Processing, Please don't close this page untill the word 'COMPLETE' appears";
+    document.getElementById("complete").innerHTML = "";
+
+    var response=[];
+    response[0] = document.getElementById('date').value;
+    response[1] = document.getElementById('name').value;
+    response[2] = document.getElementById('amount').value;
+    for (let i = 3; i < 14; i++) {
+      if(document.getElementById("RadioGroup1_"+(i-3)).checked==true){
+    response[i] = 1;}
+      else{response[i]=0}
+    }
+    response[14] = document.getElementById('citizenid').value;
+    response[15] = document.getElementById('address').value;
+    response[16] = document.getElementById('telnumber').value;
+    response[17] = document.getElementById('email').value;
+    response[18] = document.getElementById('birthday').value;
+          if(document.getElementById("accept").checked==true){
+    response[19] = 1;}
+      else{response[19]=0;}
+    response[20] = document.getElementById('read').innerHTML;
+    response[21] = document.getElementById('amountmark0').value;
+    response[22] = document.getElementById('amountmark1').value;
+    response[23] = document.getElementById('amountmark2').value;
+    response[24] = document.getElementById('amountmark3').value;
+    console.log(response);
+          google.script.run.withSuccessHandler(onSuccess)
+          .autoFillGoogleSlideFromForm(response);
+  }
+  function onSuccess(a){
+    document.getElementById("warning").innerHTML = "";
+    document.getElementById("complete").innerHTML = "COMPLETE";
+  }
+
+  function number(){
+    var amount = document.getElementById("amount").value;
+    var spell = [];
+    var count = 0;
+    for(i=amount;i>=1;i=parseInt(i/10)){
+      spell[count]=i%10;
+      count++;
+    console.log(i);
+    }
+    
+    var read = "";
+
+    var unit = {    
+      1 : "สิบ",
+      2 : "ร้อย",
+      3 : "พัน",
+      4 : "หมื่น",
+      5 : "แสน",
+      0 : "ล้าน"
+      };
+    var num = {
+      1 : "หนึ่ง",
+      2 : "สอง",
+      3 : "สาม",
+      4 : "สี่",
+      5 : "ห้า",
+      6 : "หก",
+      7 : "เจ็ด",
+      8 : "แปด",
+      9 : "เก้า",
+      0 : "ศูนย์"
+    };
+
+    if(count>1){
+      if(spell[0]==1){read+='เอ็ด';}
+      else if(spell[0]!=0){read+=num[spell[0]];}}
+    else if(count==0){read+='ศูนย์';}
+    else{read+=num[spell[0]];}
+
+    for(i=1; i<count; i++){
+      if(spell[i]==1&&i%6==1){read=unit[i%6]+read;}
+      else if(spell[i]==2&&i%6==1){
+        read=unit[i%6]+read;
+        read='ยี่'+read;
+      }
+      else if(spell[i]!==0){
+        read=unit[i%6]+read;
+        read=num[spell[i]]+read;
+      }
+      else if(i%6==0){read=unit[i%6]+read;}
+      
+
+    }
+  document.getElementById("read").innerHTML = read+"บาทถ้วน";
+ 
+ 
+  }
+
+
+
+
+</script>
+</html>
