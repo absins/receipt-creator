@@ -1,27 +1,30 @@
 function doGet(e) {
   var output = HtmlService.createHtmlOutputFromFile('Index').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-  //output.addMetaTag('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0');
+  
   return output;
 }
 
 
 function autoFillGoogleSlideFromForm(response) {
-  //e.values is an array of form values
-  
+
+  //Id of the template-google-slide file
+  var srcPresentationId = "13EcBln-UhIY3AcD2QcwMiiKikMiIxgsNTN8zaOpKQis";
+
   //file is the template file, and you get it by ID
-  var file = DriveApp.getFileById('13EcBln-UhIY3AcD2QcwMiiKikMiIxgsNTN8zaOpKQis'); 
+  var file = DriveApp.getFileById(srcPresentationId); 
   
   //We can make a copy of the template, name it, and optionally tell it what folder to live in
   //file.makeCopy will return a Google Drive file object
   var folder = DriveApp.getFolderById('1nVBpoLP-6iH8TeSMlPsgliNGoySMlMRh')
   var copy = file.makeCopy(response[1], folder); 
+
+ 
   
-var srcPresentationId = "13EcBln-UhIY3AcD2QcwMiiKikMiIxgsNTN8zaOpKQis";
-var copysrcSlideIndex = 0; // 0 means page 1.
+  var copysrcSlideIndex = 0; // 0 means page 1.
 
-var copydstSlideIndex = 0; // 0 means page 1.
+  var copydstSlideIndex = 0; // 0 means page 1.
 
-var src = SlidesApp.openById(srcPresentationId).getSlides()[copysrcSlideIndex];
+  var src = SlidesApp.openById(srcPresentationId).getSlides()[copysrcSlideIndex];
 
   //Once we've got the new file created, we need to open it as a document by using its ID
   var slide = SlidesApp.openById(copy.getId());
